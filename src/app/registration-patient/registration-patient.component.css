@@ -1,0 +1,112 @@
+/*register jdid*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+html,
+body {
+    background-image: url('src/assets/images/login.jpg');
+    background-size: 120%;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+.card {
+    height: 600px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card-body {
+    margin-top: 40px;
+    align-items: center;
+}
+
+.input-group-text {
+    margin-top: 15px;
+}
+
+.social_icon span {
+    font-size: 60px;
+    margin-left: 10px;
+    color: #5cb85c;
+}
+
+.social_icon span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.card-header h3 {
+    color: white;
+}
+
+.social_icon {
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span {
+    width: 70px;
+    background-color: #5cb85c;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.input-group {
+    height: 30px;
+}
+
+input {
+    width: 80%;
+    margin-left: 35px;
+}
+
+.card-footer {
+    margin-bottom: 20px;
+}
+
+.login_btn {
+    color: black;
+    background-color: #5cb85c;
+    margin-right: 38px;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.login_btn:hover {
+    color: black;
+    background-color: rgb(20, 166, 54);
+}
+
+.links {
+    color: white;
+}
+
+.links a {
+    margin-left: 4px;
+}
+
+.form-control {
+    height: 30px;
+}
+
+small {
+    font-size: 15px;
+}

@@ -1,0 +1,48 @@
+<h1><strong>Liste des rendez-vous</strong></h1>
+<table class="table table-striped">
+
+
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Age</th>
+            <th>Téléphone</th>
+            <th>Email</th>
+            <th>description</th>
+            <th>premiére disponiblité</th>
+            <th>deuxiéme disponiblité</th>
+            <th>troisiéme disponiblité</th>
+            <th>premiére temps</th>
+            <th>deuxiéme temps</th>
+            <th>troisiéme temps</th>
+            <th>Action1</th>
+            <th>Action2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rendezvou of rendezvous ">
+            <td>{{rendezvou.nom}}</td>
+            <td>{{rendezvou.prenom}}</td>
+            <td>{{rendezvou.age}}</td>
+            <td>{{rendezvou.telephone}}</td>
+            <td>{{rendezvou.email}}</td>
+            <td>{{rendezvou.description}}</td>
+            <td>{{rendezvou.disponibilite1}} </td>
+            <td>{{rendezvou.disponibilite2}} </td>
+            <td>{{rendezvou.disponibilite3}}</td>
+            <td>{{rendezvou.temps1}} </td>
+            <td>{{rendezvou.temps2}} </td>
+            <td>{{rendezvou.temps3}} </td>
+
+            <td>
+
+                <button (click)="updateRendezvous(rendezvou.id)" class="btn btn-success">Mettre à jour</button>
+            </td>
+
+            <td>
+                <button (click)="deleteRendezvous(rendezvou.id)" class="btn btn-success">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

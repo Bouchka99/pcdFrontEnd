@@ -1,0 +1,31 @@
+<h1><strong>Liste des rendez-vous</strong></h1>
+<table class="table table-striped">
+    <thead>
+
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Age</th>
+            <th>Téléphone</th>
+            <th>Email</th>
+            <th>description</th>
+            <th>Arrivee</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rendezvou of rendezvous ">
+            <td>{{rendezvou.nom}}</td>
+            <td>{{rendezvou.prenom}}</td>
+            <td>{{rendezvou.age}}</td>
+            <td>{{rendezvou.telephone}}</td>
+            <td>{{rendezvou.email}}</td>
+            <td>{{rendezvou.description}}</td>
+            <td>{{rendezvou.arrivee}}</td>
+
+
+
+
+        </tr>
+    </tbody>
+</table>

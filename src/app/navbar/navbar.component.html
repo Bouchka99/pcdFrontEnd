@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-md navbar-light bg-success border fixed-top">
+    <ul class="navbar-nav">
+        <li>
+            <img src="assets/images/logo.png" style="margin-left: 80px;" width="100px " height="50px ">
+        </li>
+        <li style="margin-left: 50px;" class="nav-item">
+            <a style="font-size: 15 px ;" class="nav-link text-light px-4" routerLink="./">Home</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-light px-4 " style="font-size: 15 px ;" routerLink="./profil">Profil</a>
+        </li>
+
+
+        <li class="nav-item dropdown"><a style="font-size :15px; " class="nav-link text-light px-4 dropdown-toggle" routerLink="./gereherapie" data-bs-toggle="dropdown">Gérer les therapies</a>
+            <div class="dropdown-menu" role="menu ">
+                <div *ngFor="let therapie of therapies ">
+                    <button style="font-size: 20 px ; " class="dropdown-item" (click)="voirProfilTherapie(therapie.id)">{{therapie.nom}} </button>
+                </div>
+                <hr>
+                <a style="font-size: 20 px ; " class="dropdown-item " routerLink="./ajouterTherapie">Ajouter</a>
+                <a style="font-size: 20 px ; " class="dropdown-item " routerLink="./listeTherapie">Voir plus d'informations</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown "><a style="font-size :15px; " class="nav-link text-light px-4 dropdown-toggle " data-bs-toggle="dropdown" routerLink="./gereMedecin">Gérer les sécretaires</a>
+            <div class=" dropdown-menu ">
+                <div *ngFor="let secretaire of secretaires ">
+
+                    <button style="font-size: 20 px ; " class="dropdown-item " (click)="voirProfilSecretaire(secretaire.id) ">{{secretaire.nom}} {{secretaire.prenom}}</button>
+                </div>
+                <hr>
+                <a style="font-size: 20 px ; " class="dropdown-item " routerLink="./ajouterSecretaire">Ajouter</a>
+
+                <a style="font-size: 20 px ; " class="dropdown-item " routerLink="./listeSecretaire">Voir plus d'informations</a>
+
+            </div>
+        </li>
+
+        <li class="nav-item dropdown "><a style="font-size :15px; " class="nav-link text-light px-4 dropdown-toggle " data-bs-toggle="dropdown" routerLink="./gereMedecin">Gérer les médecins</a>
+            <div class=" dropdown-menu ">
+                <div *ngFor="let medecin of medecins ">
+                    <button *ngIf="login.loggedUser !=medecin.email" style="font-size: 20 px ; " class="dropdown-item " (click)="voirProfilMedecin(medecin.id) ">{{medecin.nom}} {{medecin.prenom}}</button>
+                </div>
+                <hr>
+                <a style="font-size: 20 px ; " class="dropdown-item " routerLink="./ajouterMedecin">Ajouter</a>
+
+                <a style="font-size: 20 px ; " class="dropdown-item " routerLink="./listeMedecin">Voir plus d'informations</a>
+            </div>
+        </li>
+
+        <li class="nav-item ">
+            <a style="font-size: 15 px ; " class="nav-link text-light px-4 " routerLink="./consulterHistorique">Consulter l'historique</a>
+        </li>
+
+        <li class="nav-item ">
+            <a style="font-size: 15 px ; " class="nav-link text-light px-4 " routerLink="./envoyerMail">Envoyer un mail au patient</a>
+        </li>
+
+
+        <!-- <li class="nav-item " style="margin-top: 8px; ">
+            <form class="d-flex ">
+                <input style="margin-left: 50px; " class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                <button style="font-size: 20 px ; " class="btn btn-outline-light " type="submit ">Search</button>
+            </form>
+        </li> -->
+        <li class="nav-item " style="margin-left: 10px;margin-right: 10px; " class="nav-item ">
+            <li class="nav-item "><a class="nav-link text-light " style="font-size: 20 px ; " (click)="logOut() " routerLink="">Se déconnecter</a></li>
+
+            <li class="nav-item ">
+                <svg (click)="logOut() " style="margin-top:19px; " xmlns="http://www.w3.org/2000/svg " width="16 " height="16 " fill="currentColor " class="bi bi-box-arrow-right " viewBox="0 0 16 16 ">
+            <path fill-rule="evenodd " d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1
+            0v2z "/>
+            <path fill-rule="evenodd " d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z "/>
+          </svg>
+            </li>
+    </ul>
+</nav>
